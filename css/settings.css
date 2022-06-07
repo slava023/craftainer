@@ -1,0 +1,114 @@
+:root {
+    /* colors */
+    --main-bg      : #151515;
+    --main-text    : #fff;
+    --second-text  : #8d97a4;
+    --accent       : #bd082a;
+    --accent-active: #8f0d24;
+
+    /* container */
+    --padding            : 15px;
+    --max-width-container: 1440px;
+}
+
+
+
+
+.button {
+    box-shadow      : 10px 20px 5px #000;
+    width           : 100%;
+    border          : none;
+    border-radius   : 10px;
+    padding         : 13px 25px;
+    font-family     : inherit;
+    font-size       : 16px;
+    color           : var(--main-text);
+    background-color: #333;
+    cursor          : pointer;
+    transition      : background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--accent-active);
+}
+
+.link {
+    font-size : 20px;
+    color     : var(--main-text);
+    transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: var(--accent);
+}
+
+.card {
+    border       : 1px solid var(--second-text);
+    border-radius: 4px;
+    padding      : 15px;
+    color        : var(--main-text);
+}
+
+.grid {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : var(--padding);
+}
+
+.flex {
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+.divider {
+    margin          : 20px 0;
+    width           : 100%;
+    height          : 2px;
+    background-color: var(--second-text);
+}
+
+.input {
+    border          : 1px solid #000;
+    border-radius   : 10px;
+    padding         : 0 20px;
+    height          : 50px;
+    font-family     : inherit;
+    color           : #000;
+    background-color: #ebebeb;
+}
+
+.input__none {
+    border          : none;
+    background-color: #8f8f8f;
+    margin-left     : -20px;
+}
+
+.input::placeholder {
+    color: var(--second-text);
+}
+
+.textarea {
+    border       : 1px solid #000;
+    border-radius: 10px;
+    padding      : 20px;
+
+    font-family     : inherit;
+    color           : #000;
+    background-color: #ebebeb;
+}
+
+.textarea::placeholder {
+    color: var(--second-text);
+}
+
+
+
+@media (max-width: 425px) {
+    .input__none {
+        margin-left: -10px;
+    }
+
+    .button {
+        margin-bottom: 15px;
+    }
+}
